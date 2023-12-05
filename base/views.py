@@ -48,7 +48,7 @@ class MyTokenObtainPairView(TokenObtainPairView):
     #return user.is_staff
 
 def index(req):
-    return Response('hello', safe=False)
+    return Response('hello')
 
 
 
