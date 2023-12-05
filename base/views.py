@@ -47,8 +47,9 @@ class MyTokenObtainPairView(TokenObtainPairView):
 
     #return user.is_staff
 
-def index(req):
-    return Response('hello')
+@api_view(['GET'])
+def index(request):
+    return JsonResponse('hello', safe=False)
 
 
 
