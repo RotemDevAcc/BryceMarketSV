@@ -1,0 +1,15 @@
+# # Ignore everything
+# *
+
+# !apple.png
+# !banana.png
+# !candy.png
+# !cheese.png
+# !milk.png
+# !sweets.png
+# !toaster.png
+# !tomato.png
+# !white-bread.png
+# !wine-bottle.png
+# # Except for placeholder.png
+# !placeholder.png
