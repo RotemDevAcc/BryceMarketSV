@@ -77,7 +77,8 @@ def productlist(request):
 
         PurchasedItems = []
         try:
-            for item_id, item_info in cart.items():
+            for item_info in cart:
+                item_id = item_info.get('id')
                 product = Product.objects.get(id=item_id)
                 if product:
                     if product.price == Decimal(item_info['price']):
