@@ -432,20 +432,19 @@ class RegistrationView(APIView):
         username = data.get('username')
         existing_user = MarketUser.objects.filter(username=username).exists()
         if existing_user:
-            return Response({'success': False, 'message': "Username Already Used"}, status=400)
+            return Response({'success': False, 'message': "Username Already Used"})
         firstname = data.get('firstname')
         lastname = data.get('lastname')
         password = data.get('password')
         email = data.get('email')
         gender = data.get('gender')
         date_of_birth = data.get('date')
-        phone_number = data.get('phone_number')
-
         try:
             validate_password(password)
         except ValidationError as e:
-            return Response({'success': False, 'message': str(e)}, status=400)
+            return Response({'success': False, 'message': str(e)})
 
+        
         user = MarketUser.objects.create_user(
             username=username,
             firstname=firstname,
